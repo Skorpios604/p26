@@ -49,7 +49,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
     shuffleTimes = 1,
     animationMode = 'evenodd',
     loop = true,
-    loopDelay = 0,
+    loopDelay = 1.5,
     stagger = 0.03,
     scrambleCharset = '',
     colorFrom,
