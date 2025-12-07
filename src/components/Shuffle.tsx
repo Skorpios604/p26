@@ -48,7 +48,7 @@ const Shuffle: React.FC<ShuffleProps> = ({
     onShuffleComplete,
     shuffleTimes = 1,
     animationMode = 'evenodd',
-    loop = false,
+    loop = true,
     loopDelay = 0,
     stagger = 0.03,
     scrambleCharset = '',
