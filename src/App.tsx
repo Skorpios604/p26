@@ -1,4 +1,5 @@
 import Lightning from './components/Lightning'
+import Shuffle from './components/Shuffle'
 
 function App() {
   return (
@@ -12,8 +13,21 @@ function App() {
           size={1}
         />
       </div>
-      <div className="relative z-10 flex items-center justify-center w-full h-full pointer-events-none">
-        <h1 className="text-4xl font-bold text-white tracking-wider">Lightning Background</h1>
+      <div className="relative z-10 flex items-center justify-center w-full h-full pointer-events-auto">
+        <Shuffle
+          text="Hello World"
+          className="text-4xl font-bold text-white tracking-wider"
+          shuffleDirection="right"
+          duration={0.35}
+          animationMode="evenodd"
+          shuffleTimes={1}
+          ease="power3.out"
+          stagger={0.03}
+          threshold={0.1}
+          triggerOnce={true}
+          triggerOnHover={true}
+          respectReducedMotion={true}
+        />
       </div>
     </div>
   )
