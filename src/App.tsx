@@ -1,6 +1,7 @@
 import Lightning from './components/Lightning'
 import Shuffle from './components/Shuffle'
 import DecryptedText from './components/DecryptedText'
+import ShatterButton from './components/ShatterButton'
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           className=""
           encryptedClassName="text-white"
         />
+        <div className="mt-8">
+          <ShatterButton shatterColor="#00ffff">Download Resume</ShatterButton>
+        </div>
       </div>
     </div>
   )
