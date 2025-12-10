@@ -8,7 +8,28 @@ function App() {
   const scrollToSimulation = () => {
     const element = document.getElementById('simulation-section');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const targetPosition = element.getBoundingClientRect().top + window.scrollY;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 2000; // 2000ms = 2 seconds (slower transition)
+      let start: number | null = null;
+
+      function step(timestamp: number) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        // Ease-in-out cubic easing for smooth feel
+        const ease = (t: number) => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+
+        const percentage = Math.min(progress / duration, 1);
+
+        window.scrollTo(0, startPosition + distance * ease(percentage));
+
+        if (progress < duration) {
+          window.requestAnimationFrame(step);
+        }
+      }
+
+      window.requestAnimationFrame(step);
     }
   };
 
