@@ -39,7 +39,7 @@ const defaultCards = [
 export function DisplayCardsDemo() {
     return (
         <div className="flex min-h-[400px] w-full items-center justify-center py-20 pointer-events-auto">
-            <div className="w-full max-w-3xl">
+            <div className="w-full max-w-5xl">
                 <DisplayCards cards={defaultCards} />
             </div>
         </div>
