@@ -26,11 +26,12 @@ const defaultCards = [
     },
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
-        title: "New",
-        description: "Latest updates and features",
-        date: "Today",
+        title: "Checkmate @ BlueWave Labs",
+        description: "🚀Top contributor on this open sourced project that accumulated over 8500 GitHub stars🌟",
+        date: "Just now",
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
+        image: "/p26/checkmate.png",
         className:
             "[grid-area:stack] translate-x-24 translate-y-20 hover:translate-y-10",
     },

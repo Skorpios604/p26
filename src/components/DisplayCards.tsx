@@ -12,6 +12,7 @@ interface DisplayCardProps {
     date?: string;
     iconClassName?: string;
     titleClassName?: string;
+    image?: string;
 }
 
 function DisplayCard({
@@ -21,6 +22,7 @@ function DisplayCard({
     description = "Discover amazing content",
     date = "Just now",
     titleClassName = "text-blue-500",
+    image,
 }: DisplayCardProps) {
     return (
         <div
@@ -35,8 +37,11 @@ function DisplayCard({
                 </span>
                 <p className={cn("text-lg font-medium transition-colors duration-300 group-hover:text-[#9b5de5]", titleClassName)}>{title}</p>
             </div>
-            <p className="whitespace-nowrap text-lg text-gray-300">{description}</p>
-            <p className="text-gray-400">{date}</p>
+            {image && (
+                <img src={image} alt={title} className="h-40 w-full rounded-lg object-cover object-top" />
+            )}
+            <p className="text-lg text-gray-300 text-center">{description}</p>
+            <p className="text-gray-400 text-center">{date}</p>
         </div>
     );
 }
