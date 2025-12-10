@@ -14,12 +14,15 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "clsx": "^2.1.1",
     "face-api.js": "^0.22.2",
     "gsap": "^3.13.0",
+    "lucide-react": "^0.556.0",
     "motion": "^12.23.25",
     "postprocessing": "^6.38.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.4.0",
     "three": "^0.181.2"
   },
   "devDependencies": {
