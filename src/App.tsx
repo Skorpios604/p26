@@ -3,6 +3,7 @@ import Shuffle from './components/Shuffle'
 import DecryptedText from './components/DecryptedText'
 import ShatterButton from './components/ShatterButton'
 import GridScan from './components/GridScan'
+import SplashCursor from './components/SplashCursor'
 
 function App() {
   const scrollToSimulation = () => {
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="relative w-full h-full overflow-y-auto overflow-x-hidden">
+      <SplashCursor SPLAT_RADIUS={0.01} />
       <div className="relative w-full h-screen overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Lightning
