@@ -3,6 +3,7 @@
 import { cn } from "../lib/utils";
 import { Sparkles } from "lucide-react";
 import React from "react";
+import ElectricBorder from "./ElectricBorder";
 
 interface DisplayCardProps {
     className?: string;
@@ -25,24 +26,28 @@ function DisplayCard({
     image,
 }: DisplayCardProps) {
     return (
-        <div
+        <ElectricBorder
+            color="#9b5de5"
             className={cn(
-                "group relative flex h-72 w-[44rem] -skew-y-[8deg] select-none flex-col justify-between rounded-xl border-2 border-[#9b5de5]/60 bg-muted/70 backdrop-blur-sm px-4 py-3 transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[40rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:border-white/20 hover:bg-muted [&>*]:flex [&>*]:items-center [&>*]:gap-2",
+                "group relative h-72 w-[44rem] -skew-y-[8deg] select-none rounded-xl bg-muted/70 backdrop-blur-sm transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[40rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] hover:bg-muted",
                 className
             )}
+            style={{ borderRadius: 12 }} // Matching rounded-xl approx 12px
         >
-            <div>
-                <span className="relative inline-block rounded-full bg-blue-800 p-1">
-                    {icon}
-                </span>
-                <p className={cn("text-lg font-medium transition-colors duration-300 group-hover:text-[#9b5de5]", titleClassName)}>{title}</p>
+            <div className="flex h-full flex-col justify-between px-4 py-3 [&>*]:flex [&>*]:items-center [&>*]:gap-2">
+                <div>
+                    <span className="relative inline-block rounded-full bg-blue-800 p-1">
+                        {icon}
+                    </span>
+                    <p className={cn("text-lg font-medium transition-colors duration-300 group-hover:text-[#9b5de5]", titleClassName)}>{title}</p>
+                </div>
+                {image && (
+                    <img src={image} alt={title} className="h-40 w-full rounded-lg object-cover object-top" />
+                )}
+                <p className="text-lg text-gray-300 text-center">{description}</p>
+                <p className="text-gray-400 text-center">{date}</p>
             </div>
-            {image && (
-                <img src={image} alt={title} className="h-40 w-full rounded-lg object-cover object-top" />
-            )}
-            <p className="text-lg text-gray-300 text-center">{description}</p>
-            <p className="text-gray-400 text-center">{date}</p>
-        </div>
+        </ElectricBorder>
     );
 }
 
@@ -53,10 +58,10 @@ interface DisplayCardsProps {
 export default function DisplayCards({ cards }: DisplayCardsProps) {
     const defaultCards = [
         {
-            className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
+            className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration:700 before:left-0 before:top-0",
         },
         {
-            className: "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 grayscale-[100%] hover:before:opacity-0 before:transition-opacity before:duration:700 hover:grayscale-0 before:left-0 before:top-0",
+            className: "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration:700 before:left-0 before:top-0",
         },
         {
             className: "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10",
