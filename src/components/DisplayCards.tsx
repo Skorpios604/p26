@@ -36,7 +36,7 @@ function DisplayCard({
                 <p className={cn("text-lg font-medium transition-colors duration-300 group-hover:text-[#9b5de5]", titleClassName)}>{title}</p>
             </div>
             {image && (
-                <img src={image} alt={title} className="h-40 w-full rounded-lg object-cover object-top" />
+                <img src={image} alt={title} className="h-60 w-full rounded-lg object-cover object-top" />
             )}
             <p className="text-lg text-gray-300 text-center">{description}</p>
             <p className="text-gray-400 text-center">{date}</p>
@@ -47,7 +47,7 @@ function DisplayCard({
         <ElectricBorder
             color="#9b5de5"
             className={cn(
-                "group relative h-72 w-[44rem] -skew-y-[8deg] select-none rounded-xl bg-muted/70 backdrop-blur-sm transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[40rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none hover:bg-muted",
+                "group relative h-[27rem] w-[66rem] -skew-y-[8deg] select-none rounded-xl bg-muted/70 backdrop-blur-sm transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[60rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none hover:bg-muted",
                 className
             )}
             style={{ borderRadius: 12 }} // Matching rounded-xl approx 12px
