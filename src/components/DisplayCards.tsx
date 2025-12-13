@@ -47,7 +47,7 @@ function DisplayCard({
         <ElectricBorder
             color="#9b5de5"
             className={cn(
-                "group relative h-[20.25rem] w-[49.5rem] -skew-y-[8deg] select-none rounded-xl bg-muted/70 backdrop-blur-sm transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[45rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none hover:bg-muted",
+                "group relative h-[23.3rem] w-[57rem] -skew-y-[8deg] select-none rounded-xl bg-muted/70 backdrop-blur-sm transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[51.75rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none hover:bg-muted",
                 className
             )}
             style={{ borderRadius: 12 }} // Matching rounded-xl approx 12px
@@ -76,10 +76,10 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
             className: "[grid-area:stack] hover:-translate-y-10 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration:700 before:left-0 before:top-0",
         },
         {
-            className: "[grid-area:stack] translate-x-16 translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration:700 before:left-0 before:top-0",
+            className: "[grid-area:stack] translate-x-[250px] translate-y-10 hover:-translate-y-1 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration:700 before:left-0 before:top-0",
         },
         {
-            className: "[grid-area:stack] translate-x-32 translate-y-20 hover:translate-y-10",
+            className: "[grid-area:stack] translate-x-[500px] translate-y-20 hover:translate-y-10",
         },
     ];
 
