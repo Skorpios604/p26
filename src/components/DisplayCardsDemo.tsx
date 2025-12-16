@@ -2,6 +2,7 @@
 
 import DisplayCards from "./DisplayCards";
 import { Sparkles } from "lucide-react";
+import cardImage3 from "../assets/card_image_3.png";
 
 const defaultCards = [
     {
@@ -11,6 +12,7 @@ const defaultCards = [
         date: "Just now",
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
+        image: cardImage3,
         className:
             "[grid-area:stack] hover:-translate-y-80 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration-700 before:left-0 before:top-0 before:pointer-events-none",
     },
