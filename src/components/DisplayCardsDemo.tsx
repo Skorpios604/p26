@@ -8,7 +8,7 @@ const defaultCards = [
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
         title: "Featured",
-        description: "Discover amazing content",
+        description: "✨Building an e-commerce website to showcase my frontend and backend skills 🛒💻",
 
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
