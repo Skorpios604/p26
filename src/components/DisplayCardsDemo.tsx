@@ -2,22 +2,30 @@
 
 import DisplayCards from "./DisplayCards";
 import { Sparkles } from "lucide-react";
+import cardImage3 from "../assets/card_image_3.png";
 
 const defaultCards = [
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
         title: "Featured",
-        description: "Discover amazing content",
-        date: "Just now",
+        description: "✨Building an e-commerce website to showcase my frontend and backend skills 🛒💻",
+
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
+<<<<<<< HEAD
         className: "w-[350px]",
+=======
+        image: cardImage3,
+        link: "https://skorpios604.github.io/E-commerce/",
+        className:
+            "[grid-area:stack] hover:-translate-y-80 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration-700 before:left-0 before:top-0 before:pointer-events-none",
+>>>>>>> 7ae08b50dccd23b5ebde163b23cdca2820911103
     },
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
         title: "AI Summit",
         description: "🚀Developed the official website for the 2nd Annual AI 🤖 Summit in Vancouver, hosting 1000+ attendees.✨",
-        date: "Upcoming",
+
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
         image: "/p26/ai-summit.png",
@@ -28,7 +36,7 @@ const defaultCards = [
         icon: <Sparkles className="size-4 text-blue-300" />,
         title: "Checkmate @ BlueWave Labs",
         description: "🚀Top contributor on this open sourced project that accumulated over 8500 GitHub stars🌟",
-        date: "Just now",
+
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
         image: "/p26/checkmate.png",
