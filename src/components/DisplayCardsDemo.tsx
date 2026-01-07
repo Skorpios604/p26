@@ -11,8 +11,7 @@ const defaultCards = [
         date: "Just now",
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
-        className:
-            "[grid-area:stack] hover:-translate-y-80 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration-700 before:left-0 before:top-0 before:pointer-events-none",
+        className: "w-[350px]",
     },
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
@@ -23,8 +22,7 @@ const defaultCards = [
         titleClassName: "text-gray-200",
         image: "/p26/ai-summit.png",
         link: "https://vanaisummit.com/",
-        className:
-            "[grid-area:stack] translate-x-12 translate-y-10 hover:-translate-y-64 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration-700 before:left-0 before:top-0 before:pointer-events-none",
+        className: "w-[350px]",
     },
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
@@ -35,8 +33,7 @@ const defaultCards = [
         titleClassName: "text-gray-200",
         image: "/p26/checkmate.png",
         link: "https://github.com/bluewave-labs/Checkmate",
-        className:
-            "[grid-area:stack] translate-x-24 translate-y-20 hover:-translate-y-40",
+        className: "w-[350px]",
     },
 ];
 

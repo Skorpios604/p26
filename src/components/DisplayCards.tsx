@@ -47,7 +47,7 @@ function DisplayCard({
         <ElectricBorder
             color="#9b5de5"
             className={cn(
-                "group relative h-[23.3rem] w-[57rem] -skew-y-[8deg] select-none rounded-xl bg-muted/70 backdrop-blur-sm transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-[51.75rem] after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none hover:bg-muted",
+                "group relative select-none rounded-xl bg-muted/70 backdrop-blur-sm transition-all duration-700 after:absolute after:-right-1 after:top-[-5%] after:h-[110%] after:w-full after:bg-gradient-to-l after:from-background after:to-transparent after:content-[''] after:pointer-events-none hover:bg-muted",
                 className
             )}
             style={{ borderRadius: 12 }} // Matching rounded-xl approx 12px
@@ -90,7 +90,7 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
     const displayCards = cards || defaultCards;
 
     return (
-        <div className="grid [grid-template-areas:'stack'] place-items-center opacity-100 animate-in fade-in-0 duration-700">
+        <div className="flex flex-row flex-wrap justify-center gap-8 opacity-100 animate-in fade-in-0 duration-700">
             {displayCards.map((cardProps, index) => (
                 <DisplayCard key={index} {...cardProps} />
             ))}
