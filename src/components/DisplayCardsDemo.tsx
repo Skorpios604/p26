@@ -12,11 +12,9 @@ const defaultCards = [
 
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
-        className: "w-[350px]",
+        className: "w-[350px] [grid-area:stack] hover:-translate-y-80 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration-700 before:left-0 before:top-0 before:pointer-events-none",
         image: cardImage3,
         link: "https://skorpios604.github.io/E-commerce/",
-        className:
-            "[grid-area:stack] hover:-translate-y-80 before:absolute before:w-[100%] before:outline-1 before:rounded-xl before:outline-border before:h-[100%] before:content-[''] before:bg-blend-overlay before:bg-background/50 hover:before:opacity-0 before:transition-opacity before:duration-700 before:left-0 before:top-0 before:pointer-events-none",
     },
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
