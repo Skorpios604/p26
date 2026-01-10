@@ -444,6 +444,12 @@ export const GridScan: React.FC<GridScanProps> = ({
         renderer.toneMapping = THREE.NoToneMapping;
         renderer.autoClear = false;
         renderer.setClearColor(0x000000, 1);
+        renderer.setClearColor(0x000000, 1);
+        renderer.domElement.style.position = 'absolute';
+        renderer.domElement.style.top = '0';
+        renderer.domElement.style.left = '0';
+        renderer.domElement.style.width = '100%';
+        renderer.domElement.style.height = '100%';
         container.appendChild(renderer.domElement);
 
         const uniforms = {
@@ -645,8 +651,8 @@ export const GridScan: React.FC<GridScanProps> = ({
     ]);
 
     return (
-        <div ref={containerRef} className={`relative w-full h-full overflow-hidden ${className ?? ''}`} style={style}>
-            <div className="absolute inset-0 flex items-center justify-center z-10 pointer-events-none">
+        <div ref={containerRef} className={`relative w-full min-h-full overflow-hidden ${className ?? ''}`} style={style}>
+            <div className="relative z-10 flex items-center justify-center pointer-events-none min-h-full py-10">
                 <DisplayCardsDemo />
             </div>
 

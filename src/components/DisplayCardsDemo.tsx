@@ -12,7 +12,7 @@ const defaultCards = [
 
         iconClassName: "text-blue-500",
         titleClassName: "text-gray-200",
-        className: "w-[350px]",
+        className: "w-full max-w-[350px]",
         image: cardImage3,
         link: "https://skorpios604.github.io/E-commerce/",
     },
@@ -25,7 +25,7 @@ const defaultCards = [
         titleClassName: "text-gray-200",
         image: "/p26/ai-summit.png",
         link: "https://vanaisummit.com/",
-        className: "w-[350px]",
+        className: "w-full max-w-[350px]",
     },
     {
         icon: <Sparkles className="size-4 text-blue-300" />,
@@ -36,14 +36,14 @@ const defaultCards = [
         titleClassName: "text-gray-200",
         image: "/p26/checkmate.png",
         link: "https://github.com/bluewave-labs/Checkmate",
-        className: "w-[350px]",
+        className: "w-full max-w-[350px]",
     },
 ];
 
 export function DisplayCardsDemo() {
     return (
-        <div className="flex min-h-[400px] w-full items-center justify-center py-20 pointer-events-auto">
-            <div className="w-full max-w-7xl mt-32">
+        <div className="flex min-h-[400px] w-full items-center justify-center py-10 md:py-20 pointer-events-auto">
+            <div className="w-full max-w-7xl mt-10 md:mt-32 px-4">
                 <DisplayCards cards={defaultCards} />
             </div>
         </div>

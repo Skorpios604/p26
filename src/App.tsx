@@ -50,7 +50,7 @@ function App() {
         <div className="relative z-10 flex flex-col items-center justify-center w-full h-full pointer-events-auto gap-4">
           <Shuffle
             text="Monzer Mourad"
-            className="text-[2.75rem] text-[hsl(300,100%,65%)] tracking-widest"
+            className="text-2xl sm:text-4xl md:text-[2.75rem] text-[hsl(300,100%,65%)] tracking-widest text-center px-4"
             style={{ fontFamily: "'Press Start 2P', cursive" }}
             shuffleDirection="right"
             duration={0.35}
@@ -69,7 +69,7 @@ function App() {
             revealDirection="start"
             sequential={true}
             speed={100}
-            parentClassName="text-[2.20rem] text-white"
+            parentClassName="text-xl sm:text-3xl md:text-[2.20rem] text-white text-center px-4"
             className=""
             encryptedClassName="text-white"
           />
@@ -86,7 +86,7 @@ function App() {
         </div>
       </div>
 
-      <div id="simulation-section" className="w-full h-screen relative bg-black">
+      <div id="simulation-section" className="w-full min-h-screen relative bg-black">
         <GridScan
           sensitivity={0.55}
           lineThickness={1}
