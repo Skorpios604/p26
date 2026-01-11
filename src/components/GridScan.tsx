@@ -386,7 +386,8 @@ export const GridScan: React.FC<GridScanProps> = ({
 
     useEffect(() => {
         const el = containerRef.current;
-        if (!el) return;
+
+        if (!el || window.matchMedia('(max-width: 768px)').matches) return;
         let leaveTimer: number | null = null;
         const onMove = (e: MouseEvent) => {
             if (leaveTimer) {
@@ -434,7 +435,8 @@ export const GridScan: React.FC<GridScanProps> = ({
 
     useEffect(() => {
         const container = containerRef.current;
-        if (!container) return;
+
+        if (!container || window.matchMedia('(max-width: 768px)').matches) return;
 
         const renderer = new THREE.WebGLRenderer({ antialias: false, alpha: false, powerPreference: "high-performance" });
         rendererRef.current = renderer;
@@ -651,7 +653,7 @@ export const GridScan: React.FC<GridScanProps> = ({
     ]);
 
     return (
-        <div ref={containerRef} className={`relative w-full min-h-full overflow-hidden ${className ?? ''}`} style={style}>
+        <div ref={containerRef} className={`relative w-full min-h-full overflow-hidden [&>canvas]:hidden md:[&>canvas]:block ${className ?? ''}`} style={style}>
             <div className="relative z-10 flex items-center justify-center pointer-events-none min-h-full py-10">
                 <DisplayCardsDemo />
             </div>
