@@ -40,11 +40,16 @@ const defaultCards = [
     },
 ];
 
+import IndustrialSwitch from "./ui/toggle-switch";
+
 export function DisplayCardsDemo() {
     return (
-        <div className="flex min-h-[400px] w-full items-center justify-center py-10 md:py-20 pointer-events-auto">
+        <div className="flex min-h-[400px] w-full flex-col items-center justify-center py-10 md:py-20 pointer-events-auto">
             <div className="w-full max-w-7xl px-4">
                 <DisplayCards cards={defaultCards} />
+            </div>
+            <div className="mt-12 flex justify-center">
+                <IndustrialSwitch />
             </div>
         </div>
     );
