@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, useSpring, useTransform, useMotionValue } from "framer-motion";
 
 export default function IndustrialSwitch({
-    initialValue = true,
+    initialValue = false,
     onToggle,
 }: {
     initialValue?: boolean;
@@ -116,13 +116,13 @@ export default function IndustrialSwitch({
                                     style={{ opacity: textOpacityOff }}
                                     className="absolute text-[11px] font-black tracking-[0.2em] text-neutral-500"
                                 >
-                                    STANDBY
+                                    Contact me
                                 </motion.span>
                                 <motion.span
                                     style={{ opacity: textOpacityOn }}
                                     className="absolute text-[11px] font-black tracking-[0.2em] text-emerald-400 drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]"
                                 >
-                                    ONLINE
+                                    success
                                 </motion.span>
                             </div>
                         </motion.div>
