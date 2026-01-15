@@ -44,11 +44,13 @@ import IndustrialSwitch from "./ui/toggle-switch";
 
 export function DisplayCardsDemo() {
     return (
-        <div className="flex min-h-[400px] w-full flex-col items-center justify-center py-10 md:py-20 pointer-events-auto">
-            <div className="w-full max-w-7xl px-4">
-                <DisplayCards cards={defaultCards} />
+        <div className="flex min-h-screen w-full flex-col pointer-events-auto">
+            <div className="flex-1 flex items-center justify-center py-10 md:py-20">
+                <div className="w-full max-w-7xl px-4 mt-56">
+                    <DisplayCards cards={defaultCards} />
+                </div>
             </div>
-            <div className="mt-12 flex justify-center">
+            <div className="pb-20 flex justify-center">
                 <IndustrialSwitch />
             </div>
         </div>

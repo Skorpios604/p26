@@ -654,7 +654,7 @@ export const GridScan: React.FC<GridScanProps> = ({
 
     return (
         <div ref={containerRef} className={`relative w-full min-h-screen overflow-hidden [&>canvas]:hidden md:[&>canvas]:block ${className ?? ''}`} style={style}>
-            <div className="relative z-10 flex items-center justify-center pointer-events-none min-h-screen py-10">
+            <div className="relative z-10 flex flex-col pointer-events-none min-h-screen">
                 <DisplayCardsDemo />
             </div>
 
