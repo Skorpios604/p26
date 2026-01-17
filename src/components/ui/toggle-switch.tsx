@@ -70,7 +70,7 @@ export default function IndustrialSwitch({
             <div className="relative z-10 scale-125"> {/* Scaled up for visibility */}
 
                 {/* HOUSING */}
-                <div className="relative w-28 h-56 rounded-3xl bg-neutral-900 border-2 border-neutral-800 shadow-[0_30px_60px_rgba(0,0,0,0.8),inset_0_2px_5px_rgba(0,0,0,1)] flex justify-center p-2">
+                <div className="relative w-32 h-56 rounded-3xl bg-neutral-900 border-2 border-neutral-800 shadow-[0_30px_60px_rgba(0,0,0,0.8),inset_0_2px_5px_rgba(0,0,0,1)] flex justify-center p-2">
 
                     {/* Caution Stripes Background */}
                     <div className="absolute inset-0 rounded-3xl overflow-hidden opacity-10 pointer-events-none">
@@ -78,19 +78,19 @@ export default function IndustrialSwitch({
                     </div>
 
                     {/* Rail Slot */}
-                    <div className="absolute top-6 bottom-6 w-6 bg-black rounded-full shadow-[inset_0_2px_5px_rgba(0,0,0,1)] border-x border-neutral-800/50">
+                    <div className="absolute top-6 bottom-6 left-1/2 -translate-x-1/2 w-6 bg-black rounded-full shadow-[inset_0_2px_5px_rgba(0,0,0,1)] border-x border-neutral-800/50">
                         <div className="absolute top-0 bottom-0 left-1/2 -translate-x-1/2 w-0.5 bg-neutral-800/50" />
                     </div>
 
                     {/* Status LED */}
                     <motion.div
                         style={{ backgroundColor: ledColor, boxShadow: ledGlow }}
-                        className="absolute -top-3 w-16 h-2 rounded-full border border-neutral-900 z-20"
+                        className="absolute -top-3 left-1/2 -translate-x-1/2 w-16 h-2 rounded-full border border-neutral-900 z-20"
                     />
 
                     {/* Draggable Handle */}
                     <motion.div
-                        className="relative z-10 w-24 h-32 cursor-grab active:cursor-grabbing touch-none"
+                        className="relative z-10 w-28 h-32 cursor-grab active:cursor-grabbing touch-none"
                         style={{ y: springY, scale: handleScale }}
                         drag="y"
                         dragConstraints={{ top: 0, bottom: MAX_TRAVEL }}
@@ -114,13 +114,13 @@ export default function IndustrialSwitch({
                             <div className="mt-4 relative w-full h-6 flex items-center justify-center">
                                 <motion.span
                                     style={{ opacity: textOpacityOff }}
-                                    className="absolute text-[11px] font-black tracking-[0.2em] text-neutral-500"
+                                    className="absolute scale-125 text-[11px] font-black tracking-[0.2em] text-neutral-500"
                                 >
                                     Contact me
                                 </motion.span>
                                 <motion.span
                                     style={{ opacity: textOpacityOn }}
-                                    className="absolute text-[11px] font-black tracking-[0.2em] text-emerald-400 drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+                                    className="absolute scale-125 text-[11px] font-black tracking-[0.2em] text-emerald-400 drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]"
                                 >
                                     success
                                 </motion.span>
