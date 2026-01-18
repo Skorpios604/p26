@@ -27,14 +27,14 @@ export default function IndustrialSwitch({
     });
 
     // 3. Transforms
-    const ledColor = useTransform(springY, [0, MAX_TRAVEL], ["#451a1a", "#10b981"]);
+    const ledColor = useTransform(springY, [0, MAX_TRAVEL], ["#2e1065", "#d946ef"]);
     const ledGlow = useTransform(springY, [0, MAX_TRAVEL], [
         "0px 0px 0px rgba(0,0,0,0)",
-        "0px 0px 20px rgba(16, 185, 129, 0.5)",
+        "0px 0px 20px rgba(217, 70, 239, 0.5)",
     ]);
     const handleBg = useTransform(springY, [0, MAX_TRAVEL], [
         "linear-gradient(180deg, #404040 0%, #262626 100%)",
-        "linear-gradient(180deg, #2d4f40 0%, #153025 100%)"
+        "linear-gradient(180deg, #4c1d95 0%, #2e1065 100%)"
     ]);
 
     // Cross-fade text
@@ -120,7 +120,7 @@ export default function IndustrialSwitch({
                                 </motion.span>
                                 <motion.span
                                     style={{ opacity: textOpacityOn }}
-                                    className="absolute scale-125 text-[11px] font-black tracking-[0.2em] text-emerald-400 drop-shadow-[0_0_8px_rgba(16,185,129,0.8)]"
+                                    className="absolute scale-125 text-[11px] font-black tracking-[0.2em] text-fuchsia-400 drop-shadow-[0_0_8px_rgba(217,70,239,0.8)]"
                                 >
                                     success
                                 </motion.span>
