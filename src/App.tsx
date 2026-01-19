@@ -4,6 +4,7 @@ import DecryptedText from './components/DecryptedText'
 import ShatterButton from './components/ShatterButton'
 import GridScan from './components/GridScan'
 import SplashCursor from './components/SplashCursor'
+import { CommitsGridDemo } from './components/CommitsGridDemo'
 
 function App() {
   const scrollToSimulation = () => {
@@ -99,6 +100,10 @@ function App() {
           chromaticAberration={0.002}
           noiseIntensity={0.01}
         />
+      </div>
+
+      <div className="w-full min-h-screen relative bg-black flex items-center justify-center p-4">
+        <CommitsGridDemo />
       </div>
     </div>
   )
