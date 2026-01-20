@@ -80,7 +80,7 @@ const letterPatterns: { [key: string]: number[] } = {
     " ": [],
 };
 
-export const CommitsGrid = ({ text }: { text: string }) => {
+export const CommitsGrid = ({ text, className }: { text: string; className?: string }) => {
     const cleanString = (str: string): string => {
         const upperStr = str.toUpperCase();
 
@@ -146,7 +146,10 @@ export const CommitsGrid = ({ text }: { text: string }) => {
 
     return (
         <section
-            className="w-full max-w-xl bg-black border grid p-1.5 sm:p-3 gap-0.5 sm:gap-1 rounded-[10px] sm:rounded-[15px]"
+            className={cn(
+                "w-full max-w-xl bg-black border grid p-1.5 sm:p-3 gap-0.5 sm:gap-1 rounded-[10px] sm:rounded-[15px]",
+                className
+            )}
             style={{
                 gridTemplateColumns: `repeat(${gridWidth}, minmax(0, 1fr))`,
                 gridTemplateRows: `repeat(${gridHeight}, minmax(0, 1fr))`,
