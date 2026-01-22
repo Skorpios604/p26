@@ -98,7 +98,12 @@ export const CommitsGrid = ({ text, className }: { text: string; className?: str
     const generateHighlightedCells = (text: string) => {
         const cleanedText = cleanString(text);
 
-        const width = Math.max(cleanedText.length * 6, 6) + 1;
+        let calculatedWidth = 0;
+        cleanedText.toUpperCase().split("").forEach((char) => {
+            calculatedWidth += (char === " " ? 3 : 6);
+        });
+
+        const width = Math.max(calculatedWidth, 6) + 1;
 
         let currentPosition = 1; // we start at 1 to leave space for the top border
         const highlightedCells: number[] = [];
@@ -115,7 +120,7 @@ export const CommitsGrid = ({ text, className }: { text: string; className?: str
                     });
                     highlightedCells.push(...pattern);
                 }
-                currentPosition += 6;
+                currentPosition += (char === " " ? 3 : 6);
             });
 
         return {
