@@ -138,9 +138,9 @@ export const CommitsGrid = ({ text, className }: { text: string; className?: str
 
     const getRandomColor = () => {
         const commitColors = [
-            "#48d55d",
-            "#016d32",
-            "#0d4429"
+            "#d946ef",
+            "#c026d3",
+            "#701a75"
         ];
         const randomIndex = Math.floor(Math.random() * commitColors.length);
         return commitColors[randomIndex];
