@@ -14,49 +14,49 @@ const data = [
     {
         title: 'Home',
         icon: (
-            <HomeIcon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+            <HomeIcon className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
         href: '#',
     },
     {
         title: 'Products',
         icon: (
-            <Package className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+            <Package className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
         href: '#',
     },
     {
         title: 'Components',
         icon: (
-            <Component className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+            <Component className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
         href: '#',
     },
     {
         title: 'Activity',
         icon: (
-            <Activity className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+            <Activity className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
         href: '#',
     },
     {
         title: 'Change Log',
         icon: (
-            <ScrollText className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+            <ScrollText className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
         href: '#',
     },
     {
         title: 'Email',
         icon: (
-            <Mail className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+            <Mail className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
         href: '#',
     },
     {
         title: 'Theme',
         icon: (
-            <SunMoon className='h-full w-full text-neutral-600 dark:text-neutral-300' />
+            <SunMoon className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
         href: '#',
     },
