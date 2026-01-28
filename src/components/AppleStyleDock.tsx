@@ -13,7 +13,7 @@ const data = [
         icon: (
             <Linkedin className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
         ),
-        href: '#',
+        href: 'https://www.linkedin.com/in/monzermourad/',
     },
     {
         title: 'GitHub',
@@ -43,13 +43,19 @@ export function AppleStyleDock() {
         <div className='absolute bottom-2 left-1/2 max-w-full -translate-x-1/2'>
             <Dock className='items-end pb-3 bg-transparent dark:bg-transparent'>
                 {data.map((item, idx) => (
-                    <DockItem
+                    <a
                         key={idx}
-                        className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800'
+                        href={item.href}
+                        target='_blank'
+                        rel='noopener noreferrer'
                     >
-                        <DockLabel>{item.title}</DockLabel>
-                        <DockIcon>{item.icon}</DockIcon>
-                    </DockItem>
+                        <DockItem
+                            className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800'
+                        >
+                            <DockLabel>{item.title}</DockLabel>
+                            <DockIcon>{item.icon}</DockIcon>
+                        </DockItem>
+                    </a>
                 ))}
             </Dock>
         </div>
