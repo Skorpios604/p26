@@ -2,6 +2,7 @@ import {
     BookOpen,
     FileText,
     Github,
+    Home,
     Linkedin,
 } from 'lucide-react';
 import resumeUrl from '../assets/3Resume.pdf';
@@ -10,6 +11,14 @@ import { Link } from 'react-router-dom';
 import { Dock, DockIcon, DockItem, DockLabel } from './ui/dock';
 
 const data = [
+    {
+        title: 'Home',
+        icon: (
+            <Home className='h-full w-full text-fuchsia-500 dark:text-fuchsia-400' />
+        ),
+        href: '/',
+        external: false,
+    },
     {
         title: 'LinkedIn',
         icon: (
@@ -64,7 +73,15 @@ export function AppleStyleDock() {
                             </DockItem>
                         </a>
                     ) : (
-                        <Link key={idx} to={item.href}>
+                        <Link
+                            key={idx}
+                            to={item.href}
+                            onClick={() => {
+                                if (item.href === '/') {
+                                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                                }
+                            }}
+                        >
                             <DockItem
                                 className='aspect-square rounded-full bg-gray-200 dark:bg-neutral-800'
                             >
